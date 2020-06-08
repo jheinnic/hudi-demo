@@ -1,0 +1,4 @@
+[submodule "incubator-hudi"]
+	path = incubator-hudi
+	url = https://github.com/jheinnic/incubator-hudi
+	branch = jheinnic/demo-0.5.2
