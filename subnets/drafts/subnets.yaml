@@ -1,0 +1,141 @@
+
+  public: Public Subnets
+  private: Private Subnets
+  bastion: Bastion Subnets
+  az1: us-east-1e
+  az2: us-east-1f
+
+  base28: &base28
+    - name: Unused
+      type: subnet
+    - name: Unused
+      type: subnet
+  base27: &base27
+    - name: Unused
+      type: container
+      children: *base28
+    - name: Unused
+      type: container
+      children: *base28
+  base26: &base26
+    - name: Unused
+      type: container
+      children: *base27
+    - name: Unused
+      type: container
+      children: *base27
+  base25: &base25
+    - name: Unused
+      type: container
+      children: *base26
+    - name: Unused
+      type: container
+      children: *base26
+  base24: &base24
+    - name: Unused
+      type: container
+      children: *base25
+    - name: Unused
+      type: container
+      children: *base25
+  base23: &base23
+    - name: Unused
+      type: container
+      children: *base24
+    - name: Unused
+      type: container
+      children: *base24
+  base23: &base23
+    - name: Unused
+      type: container
+      children: *base24
+    - name: Unused
+      type: container
+      children: *base24
+  base22: &base22
+    - name: Unused
+      type: container
+      children: *base23
+    - name: Unused
+      type: container
+      children: *base23
+
+  base21: &base21
+    - name: Unused
+      type: container
+      children: *base22
+    - name: Unused
+      type: container
+      children: *base22
+
+  base20: &base20
+    - name: Unused
+      type: container
+      children: *base21
+    - name: Unused
+      type: container
+      children: *base21
+
+  base19: &base19
+    - name: Unused
+      type: container
+      children: *base20
+    - name: Unused
+      type: container
+      children: *base20
+
+  base18: &base18
+    - name: Unused
+      type: container
+      children: *base19
+    - name: Unused
+      type: container
+      children: *base19
+
+  base17: &base17
+    - name: Unused
+      type: container
+      children: *base18
+    - name: Unused
+      type: container
+      children: *base18
+  private_zone: &private_zone
+    - type: container
+      children:
+        - name: Private01
+          type: subnet
+        - name: Private02
+          type: subnet
+        - name: Private03
+          type: subnet
+        - name: Private04
+          type: subnet
+        - name: Private05
+          type: subnet
+        - name: Private06
+          type: subnet
+        - name: Private07
+          type: subnet
+        - name: Private08
+          type: subnet
+        - name: Private09
+          type: subnet
+  public_zone: &public_zone
+    - type: container
+      children:
+        - name: Public01
+          type: subnet
+        - name: Public02
+          type: subnet
+        - name: Public03
+          type: subnet
+  bastion_zone: &bastion_zone
+    - type: container
+      children:
+        - name: Bastion
+          type: subnet
+
+  name: "Sample network design"   # The name of the root node
+  root: 10.200.0.0/16             # The root network to subnet
+  type: WAN                       # The type (used in the legend)
+  spec: *base17

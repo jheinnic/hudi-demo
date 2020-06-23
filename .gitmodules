@@ -2,3 +2,6 @@
 	path = incubator-hudi
 	url = https://github.com/jheinnic/incubator-hudi
 	branch = jheinnic/demo-0.5.2
+[submodule "subnets/subnetter"]
+	path = subnets/subnetter
+	url = https://github.com/cidrblock/subnetter

@@ -1,0 +1,454 @@
+{
+  "network": "10.80.0.0/18",
+  "name": "Sample network design",
+  "ips": 16384,
+  "type": "WAN",
+  "children": [
+    {
+      "network": "10.80.0.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.4.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.8.0/22",
+      "ips": 1024,
+      "name": "Public",
+      "type": "public",
+      "children": [
+        {
+          "network": "10.80.8.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.9.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.10.0/24",
+          "ips": 256,
+          "name": "Public A",
+          "type": "public"
+        },
+        {
+          "network": "10.80.11.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        }
+      ]
+    },
+    {
+      "network": "10.80.12.0/22",
+      "ips": 1024,
+      "name": "Public",
+      "type": "public",
+      "children": [
+        {
+          "network": "10.80.12.0/24",
+          "ips": 256,
+          "name": "Public B",
+          "type": "public"
+        },
+        {
+          "network": "10.80.13.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.14.0/24",
+          "ips": 256,
+          "name": "Public C",
+          "type": "public"
+        },
+        {
+          "network": "10.80.15.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        }
+      ]
+    },
+    {
+      "network": "10.80.16.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.20.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.24.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.28.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.32.0/22",
+      "ips": 1024,
+      "name": "Private",
+      "type": "private",
+      "children": [
+        {
+          "network": "10.80.32.0/24",
+          "ips": 256,
+          "name": "Private A",
+          "type": "private"
+        },
+        {
+          "network": "10.80.33.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.34.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.35.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        }
+      ]
+    },
+    {
+      "network": "10.80.36.0/22",
+      "ips": 1024,
+      "name": "Private",
+      "type": "private",
+      "children": [
+        {
+          "network": "10.80.36.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.37.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.38.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.39.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        }
+      ]
+    },
+    {
+      "network": "10.80.40.0/22",
+      "ips": 1024,
+      "name": "Private",
+      "type": "private",
+      "children": [
+        {
+          "network": "10.80.40.0/24",
+          "ips": 256,
+          "name": "Private B",
+          "type": "private"
+        },
+        {
+          "network": "10.80.41.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.42.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.43.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        }
+      ]
+    },
+    {
+      "network": "10.80.44.0/22",
+      "ips": 1024,
+      "name": "Private",
+      "type": "private",
+      "children": [
+        {
+          "network": "10.80.44.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.45.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.46.0/24",
+          "ips": 256,
+          "name": "Private C",
+          "type": "private"
+        },
+        {
+          "network": "10.80.47.0/24",
+          "ips": 256,
+          "name": "Unused",
+          "type": "unused"
+        }
+      ]
+    },
+    {
+      "network": "10.80.48.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.52.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.56.0/22",
+      "ips": 1024,
+      "name": "Unused",
+      "type": "unused"
+    },
+    {
+      "network": "10.80.60.0/22",
+      "ips": 1024,
+      "name": "Bastion",
+      "type": "bastion",
+      "children": [
+        {
+          "network": "10.80.60.0/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.60.32/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.60.64/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.60.96/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.60.128/27",
+          "ips": 32,
+          "name": "Bastion A",
+          "type": "bastion"
+        },
+        {
+          "network": "10.80.60.160/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.60.192/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.60.224/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.61.0/27",
+          "ips": 32,
+          "name": "Bastion B",
+          "type": "bastion"
+        },
+        {
+          "network": "10.80.61.32/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.61.64/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.61.96/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.61.128/27",
+          "ips": 32,
+          "name": "Bastion C",
+          "type": "bastion"
+        },
+        {
+          "network": "10.80.61.160/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.61.192/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.61.224/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.0/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.32/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.64/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.96/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.128/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.160/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.192/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.62.224/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.0/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.32/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.64/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.96/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.128/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.160/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.192/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        },
+        {
+          "network": "10.80.63.224/27",
+          "ips": 32,
+          "name": "Unused",
+          "type": "unused"
+        }
+      ]
+    }
+  ]
+}

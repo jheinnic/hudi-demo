@@ -1,0 +1,70 @@
+
+  public: Public Subnets
+  private: Private Subnets
+  bastion: Bastion Subnets
+  az1: us-east-1e
+  az2: us-east-1f
+
+  private_zone: &private_zone
+    - type: container
+      children:
+        - name: Private01
+          type: subnet
+        - name: Private02
+          type: subnet
+        - name: Private03
+          type: subnet
+        - name: Private04
+          type: subnet
+        - name: Private05
+          type: subnet
+        - name: Private06
+          type: subnet
+        - name: Private07
+          type: subnet
+        - name: Private08
+          type: subnet
+        - name: Private09
+          type: subnet
+  public_zone: &public_zone
+    - type: container
+      children:
+        - name: Public01
+          type: subnet
+        - name: Public02
+          type: subnet
+        - name: Public03
+          type: subnet
+  bastion_zone: &bastion_zone
+    - type: container
+      children:
+        - name: Bastion
+          type: subnet
+
+  name: "Sample network design"   # The name of the root node
+  root: 10.200.0.0/16             # The root network to subnet
+  type: WAN                       # The type (used in the legend)
+  spec:
+      - name: "{{private}}"
+        type: container
+        children: 
+          - <<: *private_zone
+            name: {{az1}}
+          - name: {{az2}}
+            <<: *private_zone
+      - name: "{{public}}"
+        type: container
+        children: 
+          - <<: *public_zone
+            name: {{az1}}
+          - <<: *public_zone
+            name: {{az2}}
+      - name: "{{bastion}}"
+        type: container
+        children: 
+          - name: Bastion {{az1}}
+            type: subnet
+          - name: Bastion {{az2}}
+            type: subnet
+
+

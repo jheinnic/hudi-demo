@@ -1,0 +1,115 @@
+  subnets:
+      - &unused
+        name: Unused
+        type: unused
+      - &private_place
+        name: Private
+        type: private
+        children:
+        - *unused
+        - *unused
+        - *unused
+        - *unused
+      - &public_place
+        name: Public
+        type: public
+        children:
+        - *unused
+        - *unused
+        - *unused
+        - *unused
+  bastions: &bastions
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - name: Bastion A
+        type: bastion
+      - *unused
+      - *unused
+      - *unused
+      - name: Bastion B
+        type: bastion
+      - *unused
+      - *unused
+      - *unused
+      - name: Bastion C
+        type: bastion
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+  name: "Sample network design"   # The name of the root node
+  root: 10.80.0.0/18               # The root network to subnet
+  type: WAN                       # The type (used in the legend)
+  spec:
+      - *unused
+      - *unused
+      - name: "Public"
+        type: public
+        children: 
+        - *unused
+        - *unused
+        - name: Public A
+          type: public
+        - *unused
+      - name: "Public"
+        type: public
+        children: 
+        - name: Public B
+          type: public
+        - *unused
+        - name: Public C
+          type: public
+        - *unused
+      - *unused
+      - *unused
+      - *unused
+      - *unused
+      - name: "Private"
+        type: private
+        children: 
+        - name: Private A
+          type: private
+        - *unused
+        - *unused
+        - *unused
+      - *private_place
+      - name: "Private"
+        type: private
+        children: 
+        - name: Private B
+          type: private
+        - *unused
+        - *unused
+        - *unused
+      - name: "Private"
+        type: private
+        children: 
+        - *unused
+        - *unused
+        - name: Private C
+          type: private
+        - *unused
+      - *unused
+      - *unused
+      - *unused
+      - name: "Bastion"
+        type: bastion
+        children: *bastions
+

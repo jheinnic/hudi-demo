@@ -1,0 +1,123 @@
+
+  site1: Seattle, WA
+  site2: Portland, OR
+  site3: Denver, CO
+  site4: New York, NY
+  site5: Tampa, FL
+  site6: Austin, TX
+  site7: Cleveland, OH
+  site8: Los Angeles, CA
+
+  tier4: &tier4
+      - name: "{{site1}}"
+        type: subnet
+      - name: "{{site2}}"
+        type: subnet
+      - name: "{{site3}}"
+        type: subnet
+      - name: "{{site4}}"
+        type: subnet
+      - name: "{{site5}}"
+        type: subnet
+      - name: "{{site6}}"
+        type: subnet
+      - name: "{{site7}}"
+        type: subnet
+      - name: "{{site8}}"
+        type: subnet
+
+  tier3: &tier3
+      - name: "{{site1}}"
+        type: container
+        children: *tier4
+      - name: "{{site2}}"
+        type: container
+        children: *tier4
+      - name: "{{site3}}"
+        type: container
+        children: *tier4
+      - name: "{{site4}}"
+        type: container
+        children: *tier4
+
+  tier2: &tier2
+      - name: "{{site1}}"
+        type: container
+        children: *tier3
+      - name: "{{site2}}"
+        type: container
+        children: *tier3
+      - name: "{{site3}}"
+        type: container
+        children: *tier3
+      - name: "{{site4}}"
+        type: container
+        children: *tier3
+      - name: "{{site5}}"
+        type: container
+        children: *tier3
+      - name: "{{site6}}"
+        type: container
+        children: *tier3
+      - name: "{{site7}}"
+        type: container
+        children: *tier3
+      - name: "{{site8}}"
+        type: container
+        children: *tier3
+
+  tier1: &tier1
+      - name: "{{site1}}"
+        type: container
+        children: *tier2
+      - name: "{{site2}}"
+        type: container
+        children: *tier2
+      - name: "{{site3}}"
+        type: container
+        children: *tier2
+      - name: "{{site4}}"
+        type: container
+        children: *tier2
+      - name: "{{site5}}"
+        type: container
+        children: *tier2
+      - name: "{{site6}}"
+        type: container
+        children: *tier2
+      - name: "{{site7}}"
+        type: container
+        children: *tier2
+      - name: "{{site8}}"
+        type: container
+        children: *tier2
+
+  name: "Sample network design"   # The name of the root node
+  root: 10.64.0.0/12             # The root network to subnet
+  type: WAN                       # The type (used in the legend)
+  spec:
+      - name: "{{site1}}"
+        type: container
+        children: *tier1
+      - name: "{{site2}}"
+        type: container
+        children: *tier1
+      - name: "{{site3}}"
+        type: container
+        children: *tier1
+      - name: "{{site4}}"
+        type: container
+        children: *tier1
+      - name: "{{site5}}"
+        type: container
+        children: *tier1
+      - name: "{{site6}}"
+        type: container
+        children: *tier1
+      - name: "{{site7}}"
+        type: container
+        children: *tier1
+      - name: "{{site8}}"
+        type: container
+        children: *tier1
+ 
